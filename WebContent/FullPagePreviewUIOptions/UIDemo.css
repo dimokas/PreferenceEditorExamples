@@ -1,0 +1,29 @@
+.mui-demo-theme {
+    color: #3E606F;
+    /* background-image: url("background_texture.jpg"); */
+    background-color: lightblue;
+    background-position: left top;
+    background-repeat: repeat;
+}
+.mui-demo-theme a {
+    color: #3E606F;
+}
+.mui-demo-theme .feedback-form input,
+.mui-demo-theme .feedback-form textarea {
+    color: grey;
+}
+
+.sui-demo-theme {
+    color: #3E606F;
+    /* background-image: url("background_texture.jpg"); */
+    background-color: yellow;
+    background-position: left top;
+    background-repeat: repeat;
+}
+.sui-demo-theme a {
+    color: #3E606F;
+}
+.sui-demo-theme .feedback-form input,
+.sui-demo-theme .feedback-form textarea {
+    color: grey;
+}

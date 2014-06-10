@@ -1,0 +1,16 @@
+.mui-demo-theme {
+    color: #3E606F;
+    background-color: lightblue;
+    background-position: left top;
+    background-repeat: repeat;
+}
+.mui-demo-theme a {
+    color: #3E606F;
+}
+
+.flc-uiOptions-preview-frame {
+    color: #3E606F;
+    background-color: yellow;
+    background-position: left top;
+    background-repeat: repeat;
+}

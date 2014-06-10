@@ -1,0 +1,93 @@
+<html>
+<head>
+<!-- Required CSS files -->
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/framework/fss/css/fss-layout.css" />
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/framework/fss/css/fss-text.css" />
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/components/uiOptions/css/fss/fss-theme-bw-uio.css" />
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/components/uiOptions/css/fss/fss-theme-wb-uio.css" />
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/components/uiOptions/css/fss/fss-theme-by-uio.css" />
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/components/uiOptions/css/fss/fss-theme-yb-uio.css" />
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/components/uiOptions/css/fss/fss-text-uio.css" />
+
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/components/uiOptions/css/UIOptions.css" />
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/components/uiOptions/css/FullUIOptions.css" />
+<link rel="stylesheet" type="text/css" href="../infusion-1.4-src/components/uiOptions/css/FullNoPreviewUIOptions.css" />
+
+<!-- jQuery files -->
+<script type="text/javascript" src="../infusion-1.4-src/lib/jquery/core/js/jquery.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/lib/jquery/ui/js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/lib/jquery/ui/js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/lib/jquery/ui/js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/lib/jquery/ui/js/jquery.ui.accordion.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/lib/jquery/ui/js/jquery.ui.slider.js"></script>
+ 
+<script type="text/javascript" src="../infusion-1.4-src/lib/json/js/json2.js"></script>
+ 
+<!-- Infusion files -->
+<script type="text/javascript" src="../infusion-1.4-src/framework/core/js/jquery.keyboard-a11y.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/framework/core/js/Fluid.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/framework/core/js/FluidRequests.js"></script>  <!-- New in v1.3 -->
+<script type="text/javascript" src="../infusion-1.4-src/framework/core/js/FluidDOMUtilities.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/framework/core/js/DataBinding.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/framework/core/js/FluidIoC.js"></script>  <!-- New in v1.4 -->
+<script type="text/javascript" src="../infusion-1.4-src/lib/fastXmlPull/js/fastXmlPull.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/framework/renderer/js/fluidParser.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/framework/renderer/js/fluidRenderer.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/framework/renderer/js/RendererUtilities.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/components/uiOptions/js/Store.js"></script>  <!-- New in v1.4 -->
+<script type="text/javascript" src="../infusion-1.4-src/components/uiOptions/js/UIEnhancer.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/components/uiOptions/js/UIOptions.js"></script>
+<script type="text/javascript" src="../infusion-1.4-src/components/tableOfContents/js/TableOfContents.js"></script>
+ 
+<!-- for Full-Page UI Options only: -->
+<script type="text/javascript" src="../infusion-1.4-src/components/uiOptions/js/FullNoPreviewUIOptions.js"></script>  <!-- New in v1.4 -->
+ 
+<!-- for Full-Page With Preview UI Options only: -->
+<script type="text/javascript" src="../infusion-1.4-src/components/uiOptions/js/FullPreviewUIOptions.js"></script>  <!-- New in v1.4 -->
+ 
+<!-- for Fat-Panel UI Options only: -->
+<script type="text/javascript" src="../infusion-1.4-src/components/uiOptions/js/URLUtilities.js"></script>  <!-- New in v1.4 -->
+<script type="text/javascript" src="../infusion-1.4-src/components/uiOptions/js/FatPanelUIOptions.js"></script>  <!-- New in v1.4 -->
+<script type="text/javascript" src="../infusion-1.4-src/components/uiOptions/js/SlidingPanel.js"></script>  <!-- New in v1.4 -->
+
+
+</head>
+<body>
+    <!-- This div should be placed where the Table of Contents is to be displayed -->
+    <div class="flc-toc-tocContainer"> </div>
+ 
+    <h1>Customize Your Presentation Settings</h1>
+ 
+    <!-- This is the div that will contain the UI Options component -->
+    <div id="myUIOptions"> </div>
+    
+	<script type="text/javascript">
+	    $(document).ready(function () {    // Instantiate the UI Enhancer component, specifying the table of contents' template URL
+	        fluid.pageEnhancer({
+	            tocTemplate: "../infusion-1.4-src/components/tableOfContents/html/TableOfContents.html"
+	        });
+	     	
+	    	// Instantiate the UI Options component
+	      	fluid.uiOptions.fullNoPreview("#myUIOptions", {
+	    	  
+	    	  //fluid.uiOptions.fullPreview("#myUIOptions", {
+	            // Tell UIOptions where to find all the templates, relative to this file
+	            prefix: "../infusion-1.4-src/components/uiOptions/html/",
+	     
+	            // Tell UIOptions where to redirect to if the user cancels the operation
+	            uiOptions: {
+	                options: {
+	                    listeners: {
+	                        onCancel: function(){
+	                            window.location = "index.html";
+	                        }
+	                    }
+	                }
+	            }
+	        });	    
+	    
+	    });
+	</script> 
+</body>
+
+</html>
